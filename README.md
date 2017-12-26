@@ -6,7 +6,6 @@
 1. 更新了router4的嵌套路由写法，实现公共头部
 2. 实现了reoter4的使用函数跳转的方式，可以跳转传值
 
-![列表图](https://github.com/aiyuekuang/react_home/blob/master/doc/img/react_home.png?raw=true)
 
 # 功能与特色
 1. 项目集成了当前react中最好得ui轮子antd，不解释，已配置好，直接使用
