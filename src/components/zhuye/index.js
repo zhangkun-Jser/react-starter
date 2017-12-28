@@ -17,23 +17,19 @@ import {cuns} from 'esn'
 class Index extends React.Component {
     constructor(arg) {
         super(arg);
-        this.state={
-            test:1
-        }
-        this.tiaozhuan=this.tiaozhuan.bind(this)
-        this.gaizi=this.gaizi.bind(this)
-    }
-
-    componentWillMount(){
 
     }
 
-    tiaozhuan(){
+    componentWillMount = () => {
+
+    }
+
+    tiaozhuan=()=>{
         //这是现阶段router4使用点击跳转的方式，cuns是esn的一个sessionstorage的存储，这样存储的好处是，刷新页面也不会丢失
         cuns('canshu',"我是从首页传来的参数");
         history.push('/tui');
     }
-    gaizi (e) {
+    gaizi = (e) => {
         this.props.act_index_tit(e.target.value);
     }
 
@@ -49,7 +45,7 @@ class Index extends React.Component {
                     {this.props.children}
                 </div>
                 <div>
-                    <Input type="text" onChange={this.gaizi} placeholder="填入试试下面得字会变hah" />
+                    <Input type="text" onChange={this.gaizi.bind(this)} placeholder="填入试试下面得字会变" />
                 </div>
                 <div>
                     <Alert message={this.props.red_index_tit} type="success" />
