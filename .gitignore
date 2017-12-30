@@ -10,4 +10,8 @@ yarn-error.log*
 *.suo
 *.ntvs*
 *.njsproj
+<<<<<<< HEAD
 *.sln
+=======
+*.sln
+>>>>>>> 85c2246dc83d3767b1108a46bf8e5eac66970af5

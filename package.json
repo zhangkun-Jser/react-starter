@@ -1,5 +1,5 @@
 {
-  "name": "react_cba",
+  "name": "react_home",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -16,7 +16,7 @@
   "theme": {
     "primary-color": "#f60"
   },
-  "author": "zk",
+  "author": "ztao",
   "license": "MIT",
   "devDependencies": {
     "antd": "^2.11.0",
