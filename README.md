@@ -2,7 +2,6 @@
 这是一个react的脚手架项目，其中包含着当前最新得脚手架配置方式，技术技术栈包括react16+redux+antd+react-router4++webpack3+sass/less+axios+immutable+proxy，
 
 # 更新日志  
-**2017.11.07** [日志地址](https://github.com/aiyuekuang/react_home/blob/master/doc/doc.MD)  
 1. 更新了router4的嵌套路由写法，实现公共头部
 2. 实现了reoter4的使用函数跳转的方式，可以跳转传值
 
