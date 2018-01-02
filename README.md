@@ -6,8 +6,6 @@
 1. 更新了router4的嵌套路由写法，实现公共头部
 2. 实现了reoter4的使用函数跳转的方式，可以跳转传值
 
-![列表图](https://github.com/aiyuekuang/react_home/blob/master/doc/img/react_home.png?raw=true)
-
 # 功能与特色
 1. 项目集成了当前react中最好得ui轮子antd，不解释，已配置好，直接使用
 2. 项目具备了本地开发和打包上线得2个不同状态得场景，在开发状态，本地服务已配置了http-proxy，方便用户跨域调用后端开发得接口，并且本地调试阶段用得是根目录下得index.html，打包上线得时候部署到服务器得是加过hash得index.html这样就避免了测试人员总是无法刷新出新得界面得问题
