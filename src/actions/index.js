@@ -1,8 +1,6 @@
 import {getData,postData} from "../utils/fetchData"
 import {  message,notification     } from 'antd';
 import NProgress from 'nprogress';
-import {val_empty} from 'esn'
-
 
 export function act_index_tit(data) {
     return {
@@ -26,7 +24,7 @@ export const get = (url = "", parm = {}, chenggong = function () {
         let response = await postData(url, parm);
         //await console.log(response.data)
         await function (response) {
-            if (val_empty(response.data)) {
+            if (JSON.stringify(response.data)=='{}') {
                 chenggong(response,dispatch, getState);
             } else {
                 erro()

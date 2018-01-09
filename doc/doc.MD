@@ -15,7 +15,3 @@
 3. 调用我封装得一个简单得数据请求函数，大家可以看下代码，自行使用
 4. 在action中示范使用esn得一个小函数
 5. 精简了一些项目开发得配置
-
-    import {val_empty} from 'esn'
-
-![列表图](https://github.com/aiyuekuang/react_home/blob/master/doc/img/react_home.png?raw=true)

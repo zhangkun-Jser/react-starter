@@ -12,7 +12,7 @@ import {
     Link
 } from 'react-router-dom';
 import history from '../public/history';
-import {cuns} from 'esn'
+import autils from 'autils'
 
 class Index extends React.Component {
     constructor(arg) {
@@ -26,7 +26,7 @@ class Index extends React.Component {
 
     tiaozhuan=()=>{
         //这是现阶段router4使用点击跳转的方式，cuns是esn的一个sessionstorage的存储，这样存储的好处是，刷新页面也不会丢失
-        cuns('canshu',"我是从首页传来的参数");
+        autils.localStorageApi.set('canshu',"我是从首页传来的参数");
         history.push('/tui');
     }
     gaizi = (e) => {
