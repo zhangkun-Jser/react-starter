@@ -7,7 +7,7 @@ import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import * as index_act from "../../actions/index";
 import {mapstate} from "../../reducers/shuju"
-import autils from 'autils'
+import {localStorageApi} from 'autils'
 
 
 class Tui extends React.PureComponent {
@@ -33,7 +33,7 @@ class Tui extends React.PureComponent {
             <div>
                 <div className="neiye">
                     <h1>我是内页，我也来个列表</h1>
-                    <h3 className="hongzi">{autils.localStorageApi.get('canshu')}</h3>
+                    <h3 className="hongzi">{localStorageApi.get('canshu')}</h3>
                 </div>
                 <div className="list">
                     {list}
