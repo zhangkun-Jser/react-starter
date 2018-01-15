@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/zhangkun-Jser/react-kit"
   },
   "theme": {
     "primary-color": "#f60"
   },
-  "author": "ztao",
+  "author": "zk",
   "license": "MIT",
   "devDependencies": {
     "antd": "^2.11.0",
