@@ -79,7 +79,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "autils": "^1.1.7",
+    "autils": "^1.1.8",
     "immutable": "^3.8.1"
   }
 }
