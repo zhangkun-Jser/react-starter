@@ -22,9 +22,9 @@ export const get = (url = "", parm = {}, chenggong = function () {
     try {
         NProgress.start();
         let response = await postData(url, parm);
-        //await console.log(response.data)
+        // await console.log(response.data)
         await function (response) {
-            if (JSON.stringify(response.data)=='{}') {
+            if (response.status) {
                 chenggong(response,dispatch, getState);
             } else {
                 erro()

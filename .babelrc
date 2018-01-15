@@ -1,0 +1,15 @@
+//主要配置了antd得配置
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-async-to-generator",
+    "transform-do-expressions",
+    "syntax-do-expressions",
+    ["import", { libraryName: "antd", style: true }]
+  ]
+}
