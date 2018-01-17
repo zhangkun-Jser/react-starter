@@ -1,5 +1,5 @@
 # react_home
-这是一个react的脚手架项目，其中包含着当前最新得脚手架配置方式，技术技术栈包括react16+redux+antd+react-router4++webpack3+sass/less+axios+immutable+proxy，
+这是一个react的脚手架项目，其中包含着当前最新得脚手架配置方式，技术栈包括react16+redux+antd+react-router4++webpack3+sass/less+axios+immutable+proxy，
 
 # 更新日志  
 1. 更新了router4的嵌套路由写法，实现公共头部
@@ -25,14 +25,13 @@
 
     打包：npm run build
     
-    访问地址：http://localhost:3012
+    访问地址：http://localhost:8888
     
 # 打包上线
-* 将webpack.config.js中的publicPath的 http://111.111.11.11/build/ 改成你线上的地址，比如 http://129.0.0.111 之类，然后再执行npm run build
-* 打包后直接将build文件夹提交至你们项目得根目录中
+* 执行npm run build,然后将build里的文件提交至你们项目的根目录中
 * 务必通知你们得后端人员，将404指向build/index.html，这样基本就可以愉快得查看了
 * 如果在上线后首屏调用速度较慢，可以让后端人员开启服务器得gzip压缩功能将js压缩一下，压缩后大小基本只有原来得三分之一，这个很实用
 
 # 希望
 * 本项目是根据react社区一些朋友分享得脚手架综合，并且实际项目运用后所得出得经验
-* 朋友们如果有一些对本项目得建议，或者想法欢迎提issues，我将持续改进
+* 朋友们如果有一些对本项目得建议，或者想法欢迎去github提issues，我将持续改进优化该项目

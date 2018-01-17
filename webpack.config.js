@@ -60,7 +60,7 @@ module.exports = {
     output: {
         filename:pro ?'[name].[hash].js':'[name].js',
         path: path.join(__dirname, 'build'),
-        publicPath:  pro ? 'http://111.111.11.11/build/' : 'http://localhost:3012/build/',
+        publicPath:  pro ? './' : 'http://localhost:8888/',
         chunkFilename:pro ? '[name].[hash].js': '[name].js'
     },
     plugins,
@@ -126,7 +126,7 @@ module.exports = {
         historyApiFallback: true,//不跳转
         noInfo: true,
         inline: true,//实时刷新
-        port: '3012',
+        port: '8888',
         hot:true,
         proxy: {
             '/list': {
