@@ -1,26 +1,19 @@
 {
-  "name": "react_home",
-  "version": "1.0.0",
+  "name": "react-kit",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "npm run clean &&set NODE_ENV=production&& webpack --progress --verbose --colors --display-error-details --config webpack.config.js",
-    "server": "node server.js",
-    "t": "set NODE_ENV=production&& node server.js",
-    "clean": "rd /s/q build && mkdir build"
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --verbose --colors --display-error-details --config webpack.config.js",
+    "clean": "rimraf build && mkdir build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/zhangkun-Jser/react-kit"
   },
-  "theme": {
-    "primary-color": "#f60"
-  },
   "author": "zk",
   "license": "MIT",
   "devDependencies": {
-    "antd": "^2.11.0",
-    "axios": "^0.15.3",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -46,7 +39,6 @@
     "express-open-in-editor": "^1.0.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.8.4",
-    "history": "^4.7.2",
     "html-webpack-plugin": "^2.29.0",
     "image-webpack-loader": "^3.1.0",
     "imports-loader": "^0.6.4",
@@ -55,7 +47,6 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.2",
     "node-sass": "^4.5.0",
-    "nprogress": "^0.2.0",
     "nuka-carousel": "^2.0.1",
     "precss": "^1.4.0",
     "react": "^16.0.0",
@@ -72,6 +63,7 @@
     "redux-logger": "^2.8.2",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.2",
     "style-loader": "0.13.1",
     "url-loader": "^0.5.6",
@@ -79,7 +71,11 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "antd": "^2.11.0",
     "autils": "^1.1.8",
-    "immutable": "^3.8.1"
+    "axios": "^0.15.3",
+    "history": "^4.7.2",
+    "immutable": "^3.8.1",
+    "nprogress": "^0.2.0"
   }
 }
