@@ -49,7 +49,6 @@ if (pro) {
 }
 
 module.exports = {
-    devtool: false,
     entry: {
         app:[
             'babel-polyfill',
@@ -63,6 +62,7 @@ module.exports = {
         publicPath:  pro ? './' : 'http://localhost:8888/',
         chunkFilename:pro ? '[name].[hash].js': '[name].js'
     },
+    devtool: 'eval-source-map',
     plugins,
     resolve: {
         extensions: ['.js', '.jsx', '.less', '.scss', '.css'],
