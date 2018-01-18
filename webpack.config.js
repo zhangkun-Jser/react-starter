@@ -5,18 +5,18 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 //当前运行环境
-const pro = process.env.NODE_ENV === 'production';
+const production = process.env.NODE_ENV === 'production';
 process.noDeprecation = true;
 var plugins = [
     new webpack.optimize.CommonsChunkPlugin({
         name: "vendor",//和上面配置的入口对应
-        minChunks:2,
+        minChunks: 2,
     })
 ]
 
 
 
-if (pro) {
+if (production) {
     plugins.push(
         new ExtractTextPlugin('styles.[contenthash:6].css'),
         new webpack.optimize.UglifyJsPlugin({
@@ -50,17 +50,17 @@ if (pro) {
 
 module.exports = {
     entry: {
-        app:[
+        app: [
             'babel-polyfill',
             './src/index'
         ],
-        vendor: ['react','react-dom']
+        vendor: ['react', 'react-dom']
     },
     output: {
-        filename:pro ?'[name].[hash].js':'[name].js',
+        filename: production ? '[name].[hash].js' : '[name].js',
         path: path.join(__dirname, 'build'),
-        publicPath:  pro ? './' : 'http://localhost:8888/',
-        chunkFilename:pro ? '[name].[hash].js': '[name].js'
+        publicPath: production ? './' : '/',
+        chunkFilename: production ? '[name].[hash].js' : '[name].js'
     },
     devtool: 'eval-source-map',
     plugins,
@@ -89,7 +89,7 @@ module.exports = {
             use: ExtractTextPlugin.extract({
                 use: [{
                     loader: 'css-loader',
-                    options:{
+                    options: {
                         minimize: true //css压缩
                     }
                 }, "sass-loader"]
@@ -98,11 +98,11 @@ module.exports = {
             test: /\.(less|css)$/,
             use: ExtractTextPlugin.extract({
                 use: [{
-                        loader: 'css-loader',
-                        options:{
-                            minimize: true //css压缩
-                        }
-                    }, "less-loader"]
+                    loader: 'css-loader',
+                    options: {
+                        minimize: true //css压缩
+                    }
+                }, "less-loader"]
             })
         }, {
             test: /\.(png|jpg|gif|md)$/,
@@ -110,13 +110,13 @@ module.exports = {
         }, {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
             use: ['url-loader?limit=10000&mimetype=images/svg+xml']
-        },{
+        }, {
             test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "url-loader?limit=10000&mimetype=application/font-woff"
         }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "file-loader"
-        },{
+        }, {
             test: /\.json$/,
             use: 'json-loader'
         }]
@@ -126,12 +126,12 @@ module.exports = {
         historyApiFallback: true,//不跳转
         noInfo: true,
         inline: true,//实时刷新
-        port: '8888',
-        hot:true,
+        // port: '8888',  //不指定固定端口
+        hot: true,
         proxy: {
             '/list': {
                 target: 'http://lol.qq.com/web201310/js/videodata/LOL_VIDEOLIST_IDX3.js',
-                pathRewrite: {'^/list': ''},
+                pathRewrite: { '^/list': '' },
                 changeOrigin: true,
                 secure: false
             }
