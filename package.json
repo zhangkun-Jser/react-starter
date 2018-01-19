@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --verbose --colors --display-error-details --config webpack.config.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --colors --display-error-details --config webpack.config.js",
     "clean": "rimraf build && mkdir build"
   },
   "repository": {

@@ -11,7 +11,10 @@ var plugins = [
     new webpack.optimize.CommonsChunkPlugin({
         name: "vendor",//和配置的入口对应
         minChunks: 2,
-    })
+    }),
+    new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'index.html') // Load a custom template
+    }),
 ]
 
 if (production) {
@@ -27,9 +30,6 @@ if (production) {
             output: {
                 comments: false,
             }
-        }),
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, '/src/index.html') // Load a custom template
         }),
         new webpack.DefinePlugin({
             'process.env': {
