@@ -9,12 +9,10 @@ const production = process.env.NODE_ENV === 'production';
 process.noDeprecation = true;
 var plugins = [
     new webpack.optimize.CommonsChunkPlugin({
-        name: "vendor",//和上面配置的入口对应
+        name: "vendor",//和配置的入口对应
         minChunks: 2,
     })
 ]
-
-
 
 if (production) {
     plugins.push(
@@ -44,7 +42,6 @@ if (production) {
     plugins.push(
         new ExtractTextPlugin('styles.css'),
         new webpack.HotModuleReplacementPlugin()
-
     )
 }
 
@@ -120,7 +117,6 @@ module.exports = {
             test: /\.json$/,
             use: 'json-loader'
         }]
-
     },
     devServer: {//webpack-dev-server配置热更新以及跨域
         historyApiFallback: true,//不跳转
