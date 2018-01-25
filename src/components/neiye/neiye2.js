@@ -26,7 +26,7 @@ class Neiye2 extends React.Component {
 
     render() {
         return (
-            <div className="zhuye">
+            <div className="home">
                 我是内页2
             </div>
         )

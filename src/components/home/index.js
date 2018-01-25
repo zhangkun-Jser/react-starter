@@ -36,7 +36,7 @@ class Index extends React.Component {
     render() {
         //这里使用了嵌套路由，看不懂的，可以仔细的研究一下，对着我的写法做几次，就能理解了，不是很难
         return (
-            <div className="zhuye">
+            <div className="home">
                 <Head {...this.props} />
                 <div className="index_caidan">
                     <Link to="/neiye_1">内页1</Link> <Link to="/neiye_2">内页2</Link>
