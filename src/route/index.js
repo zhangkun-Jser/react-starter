@@ -4,12 +4,23 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
+import Loadable from 'react-loadable'
+import Index from './components/zhuye/index'
+import Neiye1 from './components/neiye/neiye1'
+import history from './components/public/history';
+const Tui = Loadable({
+    loader: () => import('./components/liebiao/tui'),
+    loading() {
+        return <div>Loading...</div>
+    }
+});
 
-import Index from 'components/home/index'
-import Tui from 'components/liebiao/tui'
-import Neiye1 from 'components/neiye/neiye1'
-import Neiye2 from 'components/neiye/neiye2'
-import history from 'components/public/history';
+const Neiye2 = Loadable({
+    loader: () => import('./components/neiye/neiye2'),
+    loading() {
+        return <div>Loading...</div>
+    }
+});
 
 
 
@@ -19,18 +30,18 @@ class App extends React.Component {
     }
     render() {
         return (
-            <Router history={history}>
+            <Router  history={history}>
                 <div>
                     {/**
                      * 这里可以公共的样式,比如 头部, 尾部, 等.
                      */
                     }
                     <Switch>
-                        <Route path="/tui" component={Tui} />
+                        <Route path="/tui" render={() => <Tui />}/>
                         <Index>
-                            <Route exact path="/" component={Neiye1} />
-                            <Route path="/neiye_1" component={Neiye1} />
-                            <Route path="/neiye_2" component={Neiye2} />
+                            <Route exact path="/" component={Neiye1}/>
+                            <Route path="/neiye_1" component={Neiye1}/>
+                            <Route path="/neiye_2" render={() => <Neiye2 />}/>
                         </Index>
                     </Switch>
                 </div>
