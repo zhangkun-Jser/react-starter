@@ -5,18 +5,18 @@ import {
     Switch
 } from 'react-router-dom';
 import Loadable from 'react-loadable'
-import Index from './components/zhuye/index'
-import Neiye1 from './components/neiye/neiye1'
-import history from './components/public/history';
+import Index from '../components/home/index'
+import Neiye1 from '../components/neiye/neiye1'
+import history from '../components/public/history';
 const Tui = Loadable({
-    loader: () => import('./components/liebiao/tui'),
+    loader: () => import('../components/liebiao/tui'),
     loading() {
         return <div>Loading...</div>
     }
 });
 
 const Neiye2 = Loadable({
-    loader: () => import('./components/neiye/neiye2'),
+    loader: () => import('../components/neiye/neiye2'),
     loading() {
         return <div>Loading...</div>
     }
