@@ -9,7 +9,7 @@ import Index from '../components/home/index'
 import Neiye1 from '../components/neiye/neiye1'
 import history from '../components/public/history';
 const Tui = Loadable({
-    loader: () => import('../components/liebiao/tui'),
+    loader: () => import('../components/list/tui'),
     loading() {
         return <div>Loading...</div>
     }
