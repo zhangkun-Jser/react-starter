@@ -17,7 +17,7 @@
 3. immutable 我觉得是如今和 reducers 配合最好得数据处理库
 4. 本项目使用得 axios 来作为 ajax，有简单得库在 utils 中的 fetchData
 5. 本项目引入了[autils](https://github.com/zhangkun-Jser/autils)，一个很小巧的函数工具库，在开发过程中，里面得很多功能都能用到
-6. 项目没有 containers 功能块，大家可以看下，我已将这块得代码写入 component 中，这是因为，在实际得开发过程中，会发现重复写 containers 非常烦躁，所以我就将他整合进 component 中，减少不必要得代码量，提高效率与代码清晰度
+6. 项目没有 containers 功能块，大家可以看下，我已将这块得代码写入 component 中，这是因为，在实际得开发过程中，会发现重复写 containers 非常冗余，所以我就将他整合进 component 中，减少不必要得代码量，提高效率与代码清晰度
 7. 项目具备了本地开发和打包上线得 2 个不同状态得场景，在开发状态，本地服务已配置了 http-proxy，方便用户跨域调用后端开发得接口，并且本地调试阶段用得是根目录下得 index.html，打包上线得时候部署到服务器得是加过 hash 的 index.html，避免了网页的缓存问题
 
 # 注意
