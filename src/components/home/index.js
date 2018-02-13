@@ -39,7 +39,7 @@ class Index extends React.Component {
             <div className="home">
                 <Head {...this.props} />
                 <div className="index_caidan">
-                    <Link to="/neiye_1">内页1</Link> <Link to="/neiye_2">内页2</Link>
+                    <Link to="/page_1">内页1</Link> <Link to="/page_2">内页2</Link>
                 </div>
                 <div>
                     {this.props.children}

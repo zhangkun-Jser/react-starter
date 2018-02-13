@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Loadable from 'react-loadable'
 import Index from '../components/home/index'
-import Neiye1 from '../components/neiye/neiye1'
+import Page1 from '../components/page/page1'
 import history from '../components/public/history';
 const Tui = Loadable({
     loader: () => import('../components/list/tui'),
@@ -15,8 +15,8 @@ const Tui = Loadable({
     }
 });
 
-const Neiye2 = Loadable({
-    loader: () => import('../components/neiye/neiye2'),
+const Page2 = Loadable({
+    loader: () => import('../components/page/page2'),
     loading() {
         return <div>Loading...</div>
     }
@@ -39,9 +39,9 @@ class App extends React.Component {
                     <Switch>
                         <Route path="/tui" render={() => <Tui />}/>
                         <Index>
-                            <Route exact path="/" component={Neiye1}/>
-                            <Route path="/neiye_1" component={Neiye1}/>
-                            <Route path="/neiye_2" render={() => <Neiye2 />}/>
+                            <Route exact path="/" component={Page1}/>
+                            <Route path="/page_1" component={Page1}/>
+                            <Route path="/page_2" render={() => <Page2 />}/>
                         </Index>
                     </Switch>
                 </div>

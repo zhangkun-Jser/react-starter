@@ -31,7 +31,7 @@ class Tui extends React.PureComponent {
             </div>))
         return (
             <div>
-                <div className="neiye">
+                <div className="page">
                     <h1>我是内页，我也来个列表</h1>
                     <h3 className="hongzi">{localStorageApi.get('canshu')}</h3>
                 </div>

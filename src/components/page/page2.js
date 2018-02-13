@@ -15,7 +15,7 @@ import {
     Link
 } from 'react-router-dom';
 
-class Neiye1 extends React.Component {
+class Page1 extends React.Component {
     constructor(arg) {
         super(arg);
 
@@ -38,4 +38,4 @@ function bindact(dispatch) {
 }
 
 
-export default connect(mapstate, bindact)(Neiye1);
+export default connect(mapstate, bindact)(Page1);
