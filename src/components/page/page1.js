@@ -15,7 +15,7 @@ import {
     Link
 } from 'react-router-dom';
 
-class Page2 extends React.Component {
+class Page1 extends React.Component {
     constructor(arg) {
         super(arg);
 
@@ -27,7 +27,7 @@ class Page2 extends React.Component {
     render() {
         return (
             <div className="home">
-                我是内页2
+                我是直接加载进来的
             </div>
         )
     }
@@ -38,4 +38,4 @@ function bindact(dispatch) {
 }
 
 
-export default connect(mapstate, bindact)(Page2);
+export default connect(mapstate, bindact)(Page1);
