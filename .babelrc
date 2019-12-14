@@ -1,20 +1,51 @@
 {
   "presets": [
-    "es2015",
-    "stage-0",
-    "react"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
   "plugins": [
-    "transform-decorators-legacy",
-    "transform-async-to-generator",
-    "transform-do-expressions",
-    "syntax-do-expressions",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
+    "react-hot-loader/babel",
     [
       "import",
       {
         "libraryName": "antd",
+        "libraryDirectory": "es",
         "style": true
       }
+    ],
+    [
+      "transform-imports",
+      {
+        "react-router": {
+          "transform": "react-router/${member}",
+          "preventFullImport": true
+        }
+      }
     ]
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "transform-react-remove-prop-types",
+          {
+            "mode": "wrap",
+            "ignoreFilenames": [
+              "node_modules"
+            ]
+          }
+        ]
+      ]
+    }
+  }
 }

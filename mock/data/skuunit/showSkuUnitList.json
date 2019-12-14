@@ -1,0 +1,119 @@
+{
+  "enabled": true,
+  "value": "success",
+  "success": {
+    "flag": "0",
+    "msg": ["系统繁忙"],
+    "data": {
+      "dataList": [
+        {
+          "skuUnitId": "185715847_1",
+          "skuUnitName": "1单元名称",
+          "isPause": 1,
+          "skuSetId": "23489551",
+          "skuSetName": "上海鲜花",
+          "groupCount": 5,
+          "planCount": 2,
+          "denyKeyCount": 9,
+          "checkStatus": 1,
+          "checkOkCount": 3000,
+          "checkRejectCount": 200,
+          "ideas": [
+            {
+              "deveiceType": 2,
+              "ideaType": 2
+            }
+          ]
+        },
+        {
+          "skuUnitId": "185715847_2",
+          "skuUnitName": "2单元名称2",
+          "isPause": 0,
+          "skuSetId": "23489556",
+          "skuSetName": "沈阳鲜花",
+          "groupCount": 5,
+          "planCount": 2,
+          "denyKeyCount": 7,
+          "checkStatus": 1,
+          "checkOkCount": 3000,
+          "checkRejectCount": 200,
+          "ideas": [
+            {
+              "deveiceType": 1,
+              "ideaType": 2
+            },
+            {
+              "deveiceType": 2,
+              "ideaType": 1
+            }
+          ]
+        },
+        {
+          "skuUnitId": "185715847_3",
+          "skuUnitName": "3单元名称",
+          "isPause": 0,
+          "skuSetId": "23489555",
+          "skuSetName": "兰州鲜花",
+          "groupCount": 5,
+          "planCount": 2,
+          "denyKeyCount": 12,
+          "checkStatus": 0,
+          "checkOkCount": 3000,
+          "checkRejectCount": 200,
+          "ideas": [
+            {
+              "deveiceType": 2,
+              "ideaType": 1
+            }
+          ]
+        },
+        {
+          "skuUnitId": "185715847_4",
+          "skuUnitName": "4单元名称",
+          "isPause": 1,
+          "skuSetId": "23489552",
+          "skuSetName": "北京二手车",
+          "groupCount": 5,
+          "planCount": 2,
+          "denyKeyCount": 4,
+          "checkStatus": 1,
+          "checkOkCount": 3000,
+          "checkRejectCount": 200,
+          "ideas": [
+            {
+              "deveiceType": 2,
+              "ideaType": 2
+            }
+          ]
+        },
+        {
+          "skuUnitId": "185715847_5",
+          "skuUnitName": "5单元名称",
+          "isPause": 0,
+          "skuSetId": "23489553",
+          "skuSetName": "香港鲜花",
+          "groupCount": 5,
+          "planCount": 2,
+          "denyKeyCount": 7,
+          "checkStatus": -1,
+          "checkOkCount": 3000,
+          "checkRejectCount": 200,
+          "ideas": [
+            {
+              "deveiceType": 1,
+              "ideaType": 1
+            }
+          ]
+        }
+      ],
+      "totalNumber": 50
+    }
+  },
+  "error": {
+    "flag": "1",
+    "msg": [
+      "系统繁忙"
+    ],
+    "data": []
+  }
+}

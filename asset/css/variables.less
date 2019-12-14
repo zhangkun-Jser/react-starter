@@ -1,0 +1,388 @@
+//
+// ==变量
+// --------------------------------------------------
+
+
+//== 颜色
+//
+//## 灰色及品牌标记颜色引导.
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray-dim:               lighten(@gray-base, 25%);   // #404040  系统主要文字颜色
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-minor:             lighten(@gray-base, 59.2%); // #979797  系统次要文字颜色
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+
+
+@brand-link:            #2577FF; //链接
+@brand-hover:           #094D86;; //链接hover
+@brand-success:         #3BA861; //状态成功、正常
+@brand-warning:         #f0ad4e; //提示警告
+@brand-danger:          #B01207; //危险、失败
+@brand-forbid:          #b4b4b4; //不可用
+@title-background:      #E9EBF1; //标题、条幅背景色
+
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #f1f2f3;
+//** Global text color on `<body>`.
+@text-color:            @gray-dim;
+
+//** Global textual link color.
+@link-color:            @brand-link;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      @brand-hover;
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  "Microsoft Yahei", Arial , Tahoma , Helvetica, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-medium:        ceil((@font-size-base * 1.14)); // ~16px 
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@padding-base-vertical:     6px;
+@padding-base-horizontal:   12px;
+
+@padding-large-vertical:    10px;
+@padding-large-horizontal:  16px;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  10px;
+
+@padding-xs-vertical:       1px;
+@padding-xs-horizontal:     5px;
+
+@line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+@line-height-small:         1.5;
+
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+
+
+// Medium screen / desktop
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+// Large screen / wide desktop
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+
+
+//
+//==混合变量
+//
+// WebKit-style focus
+.tab-focus() {
+  // WebKit-specific. Other browsers will keep their default outline style.
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// 隐藏文本
+.text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+//
+//混合工具变量
+//
+
+//去除a和label的虚线
+.remove_dotted(){
+  a,label {blr:~'expression(this.onFocus=this.blur())'}
+  a,label {outline:none;}
+}
+.font(@size:14px){
+    font-size:@size;
+}
+.h100(){
+    height:100%;
+}
+.w100(){
+    width:100%;
+}
+//边框设置
+.border(@w:1px,@c:#eee){
+    border:@w solid @c;
+}
+//定位
+.pos(r){
+    position:relative;
+}
+.pos(a){
+    position:absolute;
+}
+.pos(f){
+    position:fixed;
+}
+//背景图片,.bg("..images/1.png");
+.bg(@url){
+    background:url(@url) no-repeat;
+}
+//浮动,div{.fr;}
+.fl(){
+    float:left;
+}
+.fr(){
+    float:right;
+}
+
+.list-sn(){
+    list-style:none;
+}
+//垂直居中
+.pos-box-cc(@w,@h,@pos:absolute){
+    width:@w;
+    height:@h;
+    left:50%;
+    top:50%;
+    margin:-@w/2 0 0 -@h/2;
+    position: @pos;
+}
+// 居中对齐一个块级元素
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//文字居中
+.tc(){
+    text-align:center;
+}
+//文字垂直居中
+.tcc(@h){
+    text-align:center;
+    line-height:@h;
+}
+.l-h(@h){
+    height:@h;
+    line-height:@h;
+}
+
+// 文本溢出
+// 需要inline-block或块适当的样式
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//display
+.d-b(){
+    display:block;
+}
+.d-i(){
+    display:inline;
+}
+.d-ib(){
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.d-t(){
+    display:table;
+}
+.d-n(){
+    display:none;
+}
+.t-n(@p:none){
+    text-decoration:@p;
+}
+.tc(){
+    text-align:center;
+}
+.tl(){
+    text-align:left;
+}
+.tr(){
+    text-align:right;
+}
+.va-m(){
+  vertical-align: middle;
+}
+
+//图标距离
+
+.m-icon-left(@l-distance){
+  margin-left:@l-distance;
+}
+.m-icon-right(@r-distance){
+  margin-right:@r-distance;
+}
+
+
+//圆角
+.radius(@r){
+    -webkit-border-radius:@r;
+       -moz-border-radius:@r;
+            border-radius:@r;
+}
+
+//消息圆角
+
+.message(@me-t,@me-r){
+  background-color:#F44336;
+  width: 8px;
+  height: 8px;
+  .pos(a);
+  top:@me-t;
+  right:@me-r;
+}
+
+//三角形
+.triangle(top,@w:5px,@c:#556066){
+    border-width:@w;
+    border-color:transparent transparent @c transparent;
+    border-style:dashed dashed solid dashed;
+}
+
+.triangle(bottom,@w:5px,@c:#556066){
+    border-width:@w;
+    border-color:@c transparent transparent transparent;
+    border-style:solid dashed dashed dashed;
+
+}
+.triangle(left,@w:5px,@c:#556066){
+    border-width:@w;
+    border-color:transparent @c transparent transparent;
+    border-style:dashed dashed dashed solid;
+}
+
+.triangle(right,@w:5px,@c:#556066){
+    border-width:@w;
+    border-color:transparent transparent transparent @c;
+    border-style:dashed solid dashed dashed;
+
+}
+.triangle(@_){
+    width:0;
+    height:0;
+    overflow:hidden;
+    font-size:0;
+}
+.clearfix(){
+  *zoom: 1;
+  &:before,
+  &:after{
+    display:table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box-sizing(@box){
+  -webkit-box-sizing:@box;
+     -moz-box-sizing:@box;
+      -ms-box-sizing:@box;
+       -o-box-sizing:@box;
+              sizing:@box;
+}
+.box-shadow(@shadow){
+  -webkit-box-shadow:@shadow;
+     -moz-box-shadow:@shadow;
+      -ms-box-shadow:@shadow;
+       -o-box-shadow:@shadow;
+              shadow:@shadow;
+}
+
+//过度
+.transition(@trans){
+    -webkit-transition:@trans;
+       -moz-transition:@trans;
+        -ms-transition:@trans;
+         -o-transition:@trans;
+            transition:@trans;
+}
+.transform-origin(@origin){
+    -webkit-transition-origin:@origin;
+       -moz-transition-origin:@origin;
+        -ms-transition-origin:@origin;
+         -o-transition-origin:@origin;
+            transition-origin:@origin;
+}
+.transform(@transform){
+    -webkit-transform:@transform;
+       -moz-transform:@transform;
+        -ms-transform:@transform;
+         -o-transform:@transform;
+            transform:@transform;
+}
+.create3d(@h){
+  -webkit-perspective:@h;
+          perspective:@h;
+}
+.use3d(){
+    -webkit-transform-style:preserve-3d;
+            transform-style:preserve-3d;
+}
+
+//动画
+.animation(@as){
+    -webkit-animation:@as;
+       -moz-animation:@as;
+         -o-animation:@as;
+            animation:@as;
+}
+.trans3d(){
+    -webkit-transform-style:preserve-3d;
+       -moz-transform-style:preserve-3d;
+            transform-style:preserve-3d;
+}
+.trans-origin(@to){
+  -webkit-transform-origin:@to;
+     -moz-transform-origin:@to;
+          transform-origin:@to;
+}
+
+

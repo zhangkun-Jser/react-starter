@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "value": "success",
+  "success": {
+    "flag": "0",
+    "msg": [
+      ""
+    ],
+    "data": []
+  },
+  "error": {
+    "flag": "1",
+    "msg": [
+      "input error"
+    ],
+    "data": []
+  }
+}

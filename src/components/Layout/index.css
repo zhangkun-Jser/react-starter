@@ -1,0 +1,94 @@
+/* Header */
+.header {
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+}
+
+.header-right {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  bottom: 0;
+}
+
+.header-menu {
+  width: 150px;
+}
+
+.user-name {
+  margin-left: 10px;
+}
+
+.account {
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  padding: 0 12px;
+  display: inline-block;
+  transition: all .3s;
+  height: 100%;
+}
+
+.account i {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.account:hover {
+  background: #e6f7ff;
+}
+
+/* Sider */
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.menu-logo {
+  position: relative;
+  height: 64px;
+  padding-left: 24px;
+  overflow: hidden;
+  line-height: 64px;
+  background: #001529;
+  transition: all 0.3s;
+}
+
+.menu-logo a {
+  color: #1890FF;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-logo img {
+  display: inline-block;
+  width: 32px;
+  vertical-align: middle;
+}
+
+.menu-logo h1 {
+  display: inline-block;
+  margin: 0 0 0 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+}

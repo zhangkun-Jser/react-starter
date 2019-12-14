@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "value": "success",
+  "success": {
+    "flag": "0",
+    "msg": [
+      "修改失败"
+    ],
+    "data": []
+  },
+  "error": {
+    "flag": "1",
+    "msg": [
+      "input error"
+    ],
+    "data": []
+  }
+}

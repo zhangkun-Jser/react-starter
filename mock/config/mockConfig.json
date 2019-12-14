@@ -1,0 +1,32 @@
+{
+    "dataSource": ["json", "template", "server"],
+    "json": {
+        "path": "/mock/data/",
+        "wrap": true
+    },
+    "server": [{
+        "host": "http://localhost:8080/mock",
+        "serverParams": {
+            "index": 1
+        },
+        "statusCode": [200],
+        "rejectUnauthorized": false,
+        "secureProtocol": "SSLv3_method",
+        "cookie": "",
+        "proxy": ""
+    }, {
+        "host": "http://localhost:8081/",
+        "serverParams": {
+            "index": 2
+        },
+        "statusCode": [200],
+        "rejectUnauthorized": false,
+        "secureProtocol": "SSLv3_method",
+        "cookie": "",
+        "proxy": ""
+    }],
+    "template": {
+        "path": "/mock/template/"
+    }
+
+}
