@@ -72,7 +72,7 @@ axios.post(URL, params)
 │   │  │  ├─Footer.jsx（+/-）
 │   │  │  ├─Header.jsx（+/-）
 │   │  │  └─Sider.jsx（+/-）
-│   │  ├─Pages（+/-）       //  ========================= 分页组件
+│   │  ├─Pages（+/-）        //  ========================= 分页组件
 │   │  ├─ErrorBoundary.jsx  //  ========================= 错误边界组件
 │   │  └─index.js（+/-）
 │   │ 
@@ -96,12 +96,11 @@ axios.post(URL, params)
 ├─.eslintignore
 ├─.eslintrc.js              //  ========================= eslint规则文件
 ├─.gitignore
-├─bizdp.json                //  ========================= bizdp配置文件
 ├─index.html
 ├─package-lock.json
 ├─package.json
 ├─README.md（✎）
-├─template.html（✎）        //  ========================= html嵌入模板
+├─template.html（✎）         //  ========================= html嵌入模板
 └─webpack.config.js         //  ========================= webpack配置入口
 
 ```
